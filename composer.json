@@ -1,0 +1,18 @@
+{
+    "require": {
+        "squizlabs/php_codesniffer": "^2.5"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^0.9",
+        "sinergi/browser-detector": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Essens\\OsDetectionPlugin\\": "src"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs",
+        "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+    }
+}
